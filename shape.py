@@ -98,6 +98,8 @@ class Canvas:
     def delete(self, shape_id: uuid.UUID) -> bool:
         if shape_id in self.objects:
             del self.objects[shape_id]
+
+            # Todo: update self.sorted_objects to remove deleted shape.
             return True
         return False
 
